@@ -59,6 +59,8 @@ public class TotalFreedomMod extends JavaPlugin
     //
     public static boolean lockdownEnabled = false;
     public static Map<Player, Double> fuckoffEnabledFor = new HashMap<Player, Double>();
+    public static String MSG_NO_PERMS;
+    public static String PLAYER_NOT_FOUND;
 
     @Override
     public void onLoad()
