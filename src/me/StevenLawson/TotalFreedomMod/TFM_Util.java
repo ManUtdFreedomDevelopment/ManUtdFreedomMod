@@ -84,6 +84,8 @@ public class TFM_Util
             ChatColor.RED,
             ChatColor.LIGHT_PURPLE,
             ChatColor.YELLOW);
+    public static Object DARK;
+    public static Object FOUNDERS;
 
     static
     {
@@ -108,6 +110,11 @@ public class TFM_Util
         {
             CHAT_COLOR_NAMES.put(chatColor.name().toLowerCase().replace("_", ""), chatColor);
         }
+    }
+
+    public static void SeniorAdminChatMessage(CommandSender sender, String join, boolean senderIsConsole)
+    {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private TFM_Util()
