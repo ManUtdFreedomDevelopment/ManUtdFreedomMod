@@ -9,13 +9,18 @@ import org.bukkit.entity.Player;
 public enum TFM_PlayerRank
 {
     DEVELOPER("a " + ChatColor.DARK_PURPLE + "Developer", ChatColor.DARK_PURPLE + "[Dev]"),
-    IMPOSTOR("an " + ChatColor.YELLOW + ChatColor.UNDERLINE + "Impostor", ChatColor.YELLOW.toString() + ChatColor.UNDERLINE + "[IMP]"),
+    IMPOSTOR("an " + ChatColor.YELLOW + ChatColor.UNDERLINE + "Admin Impostor", ChatColor.YELLOW.toString() + ChatColor.UNDERLINE + "[IMP]"),
     NON_OP("a " + ChatColor.GREEN + "Non-OP", ChatColor.GREEN.toString()),
     OP("an " + ChatColor.RED + "OP", ChatColor.RED + "[OP]"),
     SUPER("a " + ChatColor.GOLD + "Super Admin", ChatColor.GOLD + "[SA]"),
     TELNET("a " + ChatColor.DARK_GREEN + "Super Telnet Admin", ChatColor.DARK_GREEN + "[STA]"),
     SENIOR("a " + ChatColor.LIGHT_PURPLE + "Senior Admin", ChatColor.LIGHT_PURPLE + "[SrA]"),
     OWNER("the " + ChatColor.BLUE + "Owner", ChatColor.BLUE + "[Owner]"),
+    SYS_ADMIN("a " + ChatColor.DARK_RED + "System Admin", ChatColor.DARK_RED + "[System-Admin]"),
+    LOOPER("the " + ChatColor.BLUE + "Co-Chief-Developer and the 3rd Founder", ChatColor.BLUE + "[3rd Founder]"),
+    DARK("the one and only AWSOME " + ChatColor.BLUE + "Lead-Developer, Co-founder, Mod-Creator, and Server Host!", ChatColor.DARK_PURPLE + "[Co-Founder + L-Dev]"),
+    FOUNDER("the " + ChatColor.BLUE + "Owner and Founder of ManUtdFreedom and a ManUtd Fan!", ChatColor.BLUE + "[Owner + Founder]"),
+    COFOUNDER("the " + ChatColor.YELLOW + "Co-founder", ChatColor.YELLOW + "[Co-Founder]"),
     CONSOLE("The " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]");
     private final String loginMessage;
     private final String prefix;
@@ -80,6 +85,22 @@ public enum TFM_PlayerRank
             {
                 return OWNER;
             }
+            if (sender.getName().equals("DarkGamingDronze"))
+        {
+            return DARK;
+        }
+            if (sender.getName().equals("KingCrawford"))
+        {
+            return COFOUNDER;
+        }
+            if (sender.getName().equals("ManUtdPvP"))
+        {
+            return FOUNDER;
+        }
+               if (sender.getName().equals("Valencia_Orange"))
+        {
+            return LOOPER;
+        }
 
             if (entry.isSeniorAdmin())
             {
